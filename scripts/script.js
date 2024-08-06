@@ -108,3 +108,11 @@ function rectangleArea(length, width) {
 // 2rectangleArea();
 
 // console.log("The area is " + rectangleArea(lengthPrompt, widthPrompt));
+
+
+
+
+
+// object constructor
+
+const salon = {storeName: 'The Fashion Pet', address: '1234 address lane dogland, ca 99999'};

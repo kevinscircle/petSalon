@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Register</h1>
+        <div class="container-register">
+          <nav class="navbar">
+            <ul class="nav--list">
+              <li class="item"><a href="index.html">Home</a></li>
+              <li class="item"><a href="#">About</a></li>
+              <li class="item"><a href="#">Blog</a></li>
+              <li class="item"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <!-- <form class="register-form">
+          <fieldset class="form-container">
+            <legend>Personal Information</legend>
+            <div class="input-container">
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" />
+            </div>
+            <div class="input-container">
+              <label for="email">Email:</label>
+              <input id="email" type="email" name="email" />
+            </div>
+          </fieldset>
+        </form> -->
+      </div>
+
+      <div class="container-form">
+        <form class="form-register" action="">
+          <p class="title-form">Register Form</p>
+
+          <legend class="register-legend">Personal Information</legend>
+          <label
+            ><input placeholder="Name" class="name input" type="text"
+          /></label>
+          <label
+            ><input placeholder="Email" class="email input" type="email"
+          /></label>
+          <label
+            ><input placeholder="Phone" class="phone input" type="tel"
+          /></label>
+          <legend class="register-legend">Pet Information</legend>
+          <label
+            ><input placeholder="Pet Name" class="pet-name input" type="text"
+          /></label>
+          <label
+            ><input placeholder="Age" class="age input" type="text"
+          /></label>
+          <label
+            ><input placeholder="Gender" class="gender input" type="text"
+          /></label>
+          <label
+            ><input placeholder="Breed" class="breed input" type="text"
+          /></label>
+
+          <button class="btn-form" type="submit">Submit</button>
+          <button class="reset" type="reset">Reset</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
