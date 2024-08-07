@@ -77,6 +77,8 @@ function petCount() {
 // petCount();
 
 function petNames() {
+    let petNamesDiv =  document.getElementById;
+    petNamesDiv
   for (let i = 0; i < pets.length; i++) {
     const name = pets[i].name;
     console.log("count", name);
