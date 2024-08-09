@@ -322,6 +322,7 @@ nav a {
   .container-form {
     margin: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -428,8 +429,9 @@ nav a {
   .btn-form {
     height: 3rem;
     width: 20rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    /* changed top and bottom margin from 3rem orginally  */
+    margin-top: .5rem; 
+    margin-bottom: .5rem;
     background-color: wheat;
     border-radius: 0.5rem;
     border: none;
@@ -459,5 +461,17 @@ nav a {
   .reset:hover {
     background-color: antiquewhite;
     box-shadow: none;
+  }
+
+  .form-btn{
+    height: 70px;
+    /* background-color: #212121; */
+    background-image: linear-gradient(to bottom, #424242,#212121);
+    border-radius: 0.5rem;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: .2rem;
   }
 /*#endregion*/

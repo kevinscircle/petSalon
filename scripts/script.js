@@ -77,14 +77,12 @@ function petCount() {
 // petCount();
 
 function petNames() {
-    let petNamesDiv =  document.getElementById;
-    petNamesDiv
+  let petNamesDiv = document.getElementById("btn-name");
+  petNamesDiv.innerHTML = "";
   for (let i = 0; i < pets.length; i++) {
     const name = pets[i].name;
     console.log("count", name);
-    document.getElementById(
-      "btn-name"
-    ).innerHTML += `<p> The name of pets in line are ${name}</p>`;
+    petNamesDiv.innerHTML += `<p> The name of pets in line are ${name}</p>`;
   }
 }
 
@@ -111,10 +109,9 @@ function rectangleArea(length, width) {
 
 // console.log("The area is " + rectangleArea(lengthPrompt, widthPrompt));
 
-
-
-
-
 // object constructor
 
-const salon = {storeName: 'The Fashion Pet', address: '1234 address lane dogland, ca 99999'};
+const salon = {
+  storeName: "The Fashion Pet",
+  address: "1234 address lane dogland, ca 99999",
+};
