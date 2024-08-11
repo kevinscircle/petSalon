@@ -59,6 +59,12 @@
             type="text"
             id="txtBreed"
           />
+          <input
+          placeholder="Owner"
+          class="owner input"
+          type="text"
+          id="txtOwner"
+        />
           <button class="reset" type="reset">Reset</button>
         </form>
         <div class="form-btn">
@@ -67,14 +73,17 @@
       </div>
     </main>
     <div class="container">
-      <h2>Registerd Pets</h2>
+      <h2>Registerd Pets <sup id="count-register">00</sup></h2>
       <table class="table table-dark table-hove">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
+            <th scope="col">Breed</th>
             <th scope="col">Gender</th>
+            <th scope="col">Owner</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody id="pets"></tbody>

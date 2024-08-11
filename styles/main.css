@@ -174,7 +174,7 @@ a {
     line-height: 1.5;
 }
 
-.btn {
+.btn-apt {
     display: block;
     width: 200px;
     background-color: black;
@@ -334,7 +334,9 @@ nav a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
   }
   
   .title-form {
@@ -425,7 +427,16 @@ nav a {
     border: none;
     border-radius: 0.5rem;
   }
+  .owner {
+    border-bottom: 1px solid wheat;
+    transition: all 400ms;
+  }
   
+  .owner:hover {
+    background-color: #424242;
+    border: none;
+    border-radius: 0.5rem;
+  }
   .btn-form {
     height: 3rem;
     width: 20rem;
@@ -467,11 +478,20 @@ nav a {
     height: 70px;
     /* background-color: #212121; */
     background-image: linear-gradient(to bottom, #424242,#212121);
-    border-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     width: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: .2rem;
+    /* margin-top: .2rem; */
+  }
+
+  #count-register{
+    color: hsl(0, 65%, 47%);
+  }
+
+  .error{
+    background-color: red;
   }
 /*#endregion*/
