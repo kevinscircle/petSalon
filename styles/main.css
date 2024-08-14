@@ -495,3 +495,55 @@ nav a {
     background-color: red;
   }
 /*#endregion*/
+
+/*#region footer  */
+
+.footer-pet {
+  background-color: rgb(137, 91, 180);
+  height: 100px;
+  margin-top: 30px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.flex-footer-pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.flex-copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 300px;
+
+}
+
+.flex-copyright div:last-of-type {
+  border-left: 3px solid black;
+  padding-left: 20px;
+  text-decoration: underline;
+}
+
+
+
+.pet-social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+.pet-social-links i {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+/*#endregion*/

@@ -42,6 +42,9 @@ function init() {
     $(this).removeClass("btn");
   });
 
+
+
+  
 //challenge 
   $("#op1").hide();
   $("#op2").hide();

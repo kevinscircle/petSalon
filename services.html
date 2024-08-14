@@ -16,14 +16,74 @@
       rel="stylesheet"
     />
 
+    <!-- icons fonts  -->
+    <script
+      src="https://kit.fontawesome.com/337be747ec.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Services</title>
   </head>
   <body>
-    <h2>Services</h2>
+    <header class="site-header">
+      <div class="container">
+        <h1>Services</h1>
+        <div class="container-register">
+          <nav class="navbar">
+            <ul class="nav--list">
+              <li class="item"><a href="index.html">Home</a></li>
+              <li class="item"><a href="services.html">Services</a></li>
+              <li class="item"><a href="register.html">Register</a></li>
+              <li class="item"><a href="register2.html">Register2 </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-form">
+        <form class="form-register" action="">
+          <p class="title-form">Service Form</p>
+
+          <p class="register-legend">Service Information</p>
+
+          <input
+            placeholder="Description"
+            class="pet-name input"
+            type="text"
+            id="txtDescription"
+          />
+          <input
+            placeholder="Price"
+            class="age input"
+            type="text"
+            id="txtPrice"
+          />
+
+          <button class="reset" type="reset">Reset</button>
+        </form>
+        <div class="form-btn">
+          <button class="btn-form" onclick="register();">Submit</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-pet flex-footer-pet">
+        <div>Fashion <span class="bold underline">Pets</span></div>
+        <div class="flex-copyright">
+          <div>Copyright <span>&copy</span> 2024</div>
+          <div class="bold">Privacy Policy</div>
+        </div>
+        <div class="pet-social-links">
+          <i class="fa-brands fa-facebook-f"></i
+          ><i class="fa-brands fa-linkedin-in"></i
+          ><i class="fa-brands fa-youtube"></i>
+        </div>
+      </footer>
+
+    <!-- <h2>Services</h2>
 
     <div>
       <div>
-        <label for="">Title:</label>
+        <label for="">Description:</label>
         <input type="text" />
       </div>
       <div>
@@ -31,9 +91,17 @@
         <input type="text" />
       </div>
       <button class="btn btn-primary" id="btnRegister">Register</button>
-    </div>
+    </div> -->
 
     <script src="./plugins/jQuery3.7.js"></script>
     <script src="./scripts/services.js"></script>
+    <script src="./scripts/storeManager.js"></script>
   </body>
 </html>
+
+<!-- - Use jQuery to create notification under the pet registration form.
+
+Create another page named services.html and create another form to register services (description, price).
+Create the constructor for the services objects.
+ Create validations and notifications for the new form using jQuery.
+ Clear the form after the registration of the services using jQuery. -->
