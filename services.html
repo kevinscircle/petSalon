@@ -39,7 +39,10 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="service-container">
+      <div>
+        <img src="./img/dal-spots-fan.jpg" class="service-img" alt="" />
+      </div>
       <div class="container-form">
         <form class="form-register" action="">
           <p class="title-form">Service Form</p>
@@ -48,36 +51,42 @@
 
           <input
             placeholder="Description"
-            class="pet-name input"
+            class="description input"
             type="text"
             id="txtDescription"
           />
+          <small class="descriptionValidationMsg invalidWarning"
+            >This is a required field</small
+          >
+
           <input
             placeholder="Price"
-            class="age input"
+            class="price input"
             type="text"
             id="txtPrice"
           />
+          <small class="priceValidationMsg invalidWarning">This is a required field</small>
 
           <button class="reset" type="reset">Reset</button>
         </form>
         <div class="form-btn">
-          <button class="btn-form" onclick="register();">Submit</button>
+          <!-- <button class="btn-form" onclick="register();">Submit</button> -->
+          <button class="btn-form" id="btnService">Submit</button>
         </div>
       </div>
     </main>
     <footer class="footer-pet flex-footer-pet">
-        <div>Fashion <span class="bold underline">Pets</span></div>
-        <div class="flex-copyright">
-          <div>Copyright <span>&copy</span> 2024</div>
-          <div class="bold">Privacy Policy</div>
-        </div>
-        <div class="pet-social-links">
-          <i class="fa-brands fa-facebook-f"></i
-          ><i class="fa-brands fa-linkedin-in"></i
-          ><i class="fa-brands fa-youtube"></i>
-        </div>
-      </footer>
+      <div>Fashion <span class="bold underline">Pets</span></div>
+      <div class="flex-copyright">
+        <div>Copyright <span>&copy</span> 2024</div>
+        <div class="bold">Privacy Policy</div>
+      </div>
+      <div class="pet-social-links">
+        <i class="fa-brands fa-facebook-f"></i
+        ><i class="fa-brands fa-linkedin-in"></i
+        ><i class="fa-brands fa-youtube"></i>
+      </div>
+    </footer>
 
     <!-- <h2>Services</h2>
 
@@ -100,8 +109,5 @@
 </html>
 
 <!-- - Use jQuery to create notification under the pet registration form.
-
-Create another page named services.html and create another form to register services (description, price).
-Create the constructor for the services objects.
  Create validations and notifications for the new form using jQuery.
- Clear the form after the registration of the services using jQuery. -->
+-->

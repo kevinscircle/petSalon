@@ -8,8 +8,8 @@ let inputDescription = document.getElementById("txtDescription");
 let inputPrice = document.getElementById("txtPrice");
 
         // jQuery
-        // let inputDescription = $("txtDescription").val();
-        // let inputPrice = $("txtPrice").val();
+        // let inputDescription = $("#txtDescription").val();
+        // let inputPrice = $("#txtPrice").val();
 
 //constructor
 function Service(description, price) {
@@ -18,12 +18,12 @@ function Service(description, price) {
 }
 
 //use jQuery\
-function register() {
-  console.log("Register");
+function serviceForm() {
+  console.log("serviceForm");
 
   let newService = new Service(inputDescription.value, inputPrice.value);
 
-  save(newService); // for local storage script 
+  saveServices(newService); // for local storage script 
   console.log("service", newService);
 // storage local
 
@@ -67,11 +67,37 @@ function isValid(service) {
   }
 }
 
-function clearInput() {}
+// function clearInput() {
+//     inputDescription.value = "";
+//     inputPrice.value = "";
+// }
 
 function init() {
   // hooks
-  $("#btnRegister").on("click", register);
+  $("#btnService").on("click", serviceForm);
 }
 
 window.onload = init;
+
+
+
+
+
+
+    function isValidService(service){
+        let validDescription=true;
+        let validPrice=true;
+        if(service.description==""){
+            validDescription=false;
+            $(".descriptionvalidationMsg").css("color","red").show();
+        }else{
+            $(".descriptionvalidationMsg").hide();
+        }
+        if(service.price==""){
+            validPrice=false;
+            $(".priceValidationMsg").css("color","red").show();
+        }else{
+            $(".priceValidationMsg").hide();
+        }
+        return validDescription && validPrice;
+    }

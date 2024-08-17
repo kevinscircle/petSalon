@@ -6,6 +6,7 @@
 
 function displayRow() {
   let table = document.getElementById("pets");
+  // let pets = readPets();
 
   let row = "";
 
@@ -21,16 +22,16 @@ function displayRow() {
        <td> ${pet.breed}</td>
        <td> ${pet.gender}</td>
         <td> ${pet.owner}</td>
-         <td><button class='btn btn-danger btn-sm' onclick="deletePet(${i})">Delete</button>
-                  <button class='btn btn-primary btn-sm'>Edit</button>
-                        <button class='btn btn-info btn-sm'>Archive</button>
+         <td><button class='btn btn-danger btn-sm btn-space' onclick="deletePet(${i})">Delete</button>
+                  <button class='btn btn-primary btn-sm btn-space'>Edit</button>
+                        <button class='btn btn-info btn-sm btn-space'>Archive</button>
                         </td>
     </tr>`;
     //display the row on the html
   }
 
   table.innerHTML = row;
-  displayInfo();
+
 }
 
 console.log("pets in display", pets);

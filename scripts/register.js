@@ -1,4 +1,5 @@
-let pets = []; //pets array
+let pets = []; 
+//pets array
 
 //constructor
 function Pet(name, age, gender, breed, owner) {
@@ -63,31 +64,45 @@ function register() {
   if (isValid(newPet) == true) {
     pets.push(newPet);
 
+    console.log(pets);
     displayRow();
+    displayInfo();
   }
 
+  savePets(newPet);
   console.log("pets", pets);
 }
 
-function deletePet(id) {
-  console.log("Deleting", id);
-  pets.splice(id, 1);
 
-  document.getElementById(id).remove();
-  displayRow(); // refresh display
+
+function getServices() {
+  // get the list from local storage
+  let servicesList = readServices();
+  //  console.log('services', servicesList);
+  let option;
+  // travel the array of services
+  for (let i = 0; i < servicesList.length; i++) {
+    let service = servicesList[i];
+
+    //create the template
+    option += `<option>${service.description}</option>`;
+  }
+  //display the row on the html
+  $("#txtServices").append(option);
+  // create the html <option>
+
+  // document.getElementsByTagName('option')
 }
+
 
 function init() {
-  let pet1 = new Pet("Scooby", 10, "Male", "Husky", "May");
-  let pet2 = new Pet("Scrappy", 9, "Male", "Mixed", "Dave");
-
-  console.log("pet1 and pet2", pet1, pet2);
-
-  pets.push(pet1, pet2);
+  // read pets from local storage
+  pets = readPets(); // Correctly assign the result to the pets array
+  // pets.push(pets)
   displayRow();
+  displayInfo();
+  getServices();
 }
 
+
 window.onload = init;
-
-
-

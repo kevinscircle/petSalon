@@ -1,0 +1,74 @@
+// contatiner
+
+const services = [];
+
+// to capture user input
+
+// let inputDescription = document.getElementById("txtDescription");
+// let inputPrice = document.getElementById("txtPrice");
+
+// jQuery
+let inputDescription = $("txtDescription");
+let inputPrice = $("txtPrice");
+
+//constructor
+function Service(description, price) {
+  this.description = description;
+  this.price = price;
+}
+
+function serviceFrom() {
+  console.log("Register");
+
+  let newService = new Service(inputDescription.val(), inputPrice.val()); // * reomve.value from both and uncomment non jQuery
+
+  saveServices(newService); // for local storage script
+  console.log("service", newService);
+
+  // localStorage.setItem("service");  // what is this for prof deleted
+
+  // jQuery
+
+  $("input").val(""); // clear inputs
+
+  if (isValid(newService) == true) {
+    services.push(newService);
+  }
+
+  //   else {
+  //     alert("incorrect try again");
+  //   }
+
+  services.push(newService);
+  console.log("adding service", services);
+}
+
+// to validate
+function isValid(service) {
+  let validation = true;
+  inputDescription.removeClass(".error");
+  inputPrice.removeClass(".error");
+
+  // jQuery
+
+  if (service.description == "") {
+    validation = false;
+    inputDescription.addClass(".error");
+  }
+  if (service.price == "") {
+    validation = false;
+    inputPrice.addClass(".error");
+  }
+}
+
+// function clearInput() {
+//     inputDescription.value = "";
+//     inputPrice.value = "";
+// }
+
+function init() {
+  // hooks
+  $("#btnService").on("click", serviceFrom);
+}
+
+window.onload = init;
